@@ -186,7 +186,7 @@ class ScanToken(object):
         '''The string line position where this token starts.'''
         self.source = source
         '''If specified in ScanExp.tokenize, a way to identify which string this token was in.'''
-        self.name = expression.name
+        self.type = expression.name
 
 
     # Simple string methods
@@ -195,4 +195,4 @@ class ScanToken(object):
 
     def __repr__(self):
         return (str(self.source) + ":" if self.source else "") + str(self.linepos) + ":" + str(
-            self.strpos) + ": '" + str(self.text) + "' " + self.name
+            self.strpos) + ": '" + str(self.text) + "' " + self.type
